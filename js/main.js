@@ -21,6 +21,29 @@ var menuItems = {
 // article id=item.name
 
 document.addEventListener("DOMContentLoaded", function(event) {
+   //move toggle order panel
+   var headerButton = document.getElementById('headerButton');
+   var panel = document.getElementById('panel');
+   var screen = document.getElementById('screen');
+
+   function togglePanel() {
+      if (panel.className != "") {
+         panel.className = "";
+      } else {
+         panel.className = "panel-active";
+      }
+      if (screen.className != "") {
+         screen.className = "";
+         screen.removeEventListener('click', togglePanel);
+      } else {
+         screen.className = "screen-active"
+         screen.addEventListener('click', togglePanel);
+      }
+   }
+
+   headerButton.addEventListener('click', togglePanel);
+
+
 
    // generate table items
    var orderTable = document.getElementById('orderTable');
@@ -86,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       event.preventDefault();
       let toast = document.createElement('div');
       toast.style.backgroundColor = 'red';
+      toast.className = 'toast';
       let nameInput = document.getElementById('nameInput');
       let numberInput = document.getElementById('numberInput');
       let addressInput = document.getElementById('addressInput');
@@ -113,28 +137,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
          toast.style.backgroundColor = 'green'
       }
 
-      document.body.append(toast);
+      document.body.appendChild(toast);
 
-      // if no menu items || any text field blank
-      // validation message
-      // else
-      // success message
    }
 
    let formSubmitButton = document.getElementById('formSubmit');
 
    formSubmitButton.addEventListener('click', createToast);
 
-   //click button
-   // create new tr
-   // create new td w/name
-   // create new td w/price
-   // append td to tr
-   // append tr to table
-   //subtotal = subtotal + price
-   // recalculate tax and total
 
-
-   // no items/blank textfiels -- validation error message in toast
-   // success message in toast
 });

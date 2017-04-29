@@ -4,13 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>Galvanize Delivers</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <header>
-    <a href="index.html"><h1>Galvanize Delivers</h1></a>
-    <button>Order Delivery</button>
+  <header class="header">
+    <a class="logo" href="index.html"><h1>Galvanize Delivers</h1></a>
+    <button id="headerButton" class="header-button">Order Delivery</button>
   </header>
+  <aside id="panel" class="panel">
+    <button class="panel-button">Order Delivery</button>
+  </aside>
   <main>
     <section id="menuItems">
       <h2>Menu</h2>
@@ -18,11 +23,11 @@
     </section>
     <section id="orderTable">
       <h2>Order</h2>
-      <table>
+      <table class="table">
         <thead>
           <tr>
-            <th>Item</th>
-            <th>Price</th>
+            <th class="table--header">Item</th>
+            <th class="table--header">Price</th>
           </tr>
         </thead>
         <tbody>
@@ -40,29 +45,29 @@
           </tr>
         </tfoot>
       </table>
-      <form>
-        <label for="">Name
-          <input id="nameInput" type="text">
+      <form class="form">
+        <label class="input-label">Name
+          <input class="input" id="nameInput" type="text">
         </label>
-        <label for="">Phone Number
-          <input id="numberInput" type="text">
+        <label class="input-label">Phone Number
+          <input class="input" id="numberInput" type="text">
         </label>
-        <label for="">Address
-          <input id="addressInput" type="text">
-        </label>
-        <input id="formSubmit" type="submit">Place Order</input>
+        <label class="input-label">Address
+          <input class="input" id="addressInput" type="text">
+        </label class="input-label">
+        <input class="input" id="formSubmit" type="submit">Place Order</input>
       </form>
     </section>
   </main>
-  <footer>
-    <h2>Galvanize Delivers</h2>
+  <footer class="footer">
+    <h2 class="footer-header">Galvanize Delivers</h2>
     <p>Fine Dining, Delivered.</p>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="order.html">Order Delivery</a></li>
     </ul>
   </footer>
-  <footer>
+  <footer class="footer footer--darkbase">
     <p>&copy; 2016 Galvanize Delivers</p>
   </footer>
   <script type="text/javascript" src="js/main.js"></script>
