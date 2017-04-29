@@ -12,42 +12,11 @@
     <button>Order Delivery</button>
   </header>
   <main>
-    <section>
+    <section id="menuItems">
       <h2>Menu</h2>
-      <article>
-        <div></div>
-        <div>
-          <h4>Royale with Cheese</h4>
-          <p>$8.99</p>
-          <button>Add to Order</button>
-        </div>
-      </article>
-      <article>
-        <div></div>
-        <div>
-          <h4>Arugula Pie</h4>
-          <p>$11.99</p>
-          <button>Add to Order</button>
-        </div>
-      </article>
-      <article>
-        <div></div>
-        <div>
-          <h4>Smoked Swine</h4>
-          <p>$14.99</p>
-          <button>Add to Order</button>
-        </div>
-      </article>
-      <article>
-        <div></div>
-        <div>
-          <h4>Ice Cream Biscuit</h4>
-          <p>$7.99</p>
-          <button>Add To Order</button>
-        </div>
-      </article>
+
     </section>
-    <section>
+    <section id="orderTable">
       <h2>Order</h2>
       <table>
         <thead>
@@ -56,19 +25,22 @@
             <th>Price</th>
           </tr>
         </thead>
+        <tbody>
+
+        </tbody>
         <tfoot>
-          <tr>
+          <tr id="subtotalRow">
             <td>Subtotal</td>
           </tr>
-          <tr>
+          <tr id="taxRow">
             <td>Tax</td>
           </tr>
-          <tr>
+          <tr id="totalRow">
             <td>Total</td>
           </tr>
         </tfoot>
       </table>
-      <form action="#submit">
+      <form>
         <label for="">Name
           <input type="text">
         </label>
@@ -78,7 +50,7 @@
         <label for="">Address
           <input type="text">
         </label>
-        <submit>Place Order</submit>
+        <input type="submit">Place Order</input>
       </form>
     </section>
   </main>
@@ -93,6 +65,7 @@
   <footer>
     <p>&copy; 2016 Galvanize Delivers</p>
   </footer>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
