@@ -25,6 +25,11 @@ $alert-success: rgb(0, 204, 102);
   line-height: 1.5;
 }
 
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
 body,
 h2,
 h3,
@@ -44,10 +49,15 @@ ul {
   background-color: $base;
 }
 
+.header .wrapper {
+  padding: 0;
+}
+
 .header-logo {
   text-decoration: none;
   color: $light;
   text-align: center;
+  display: block;
 }
 
 .header-logo h1 {
@@ -139,6 +149,7 @@ aside {
 .textblock {
   padding-top: 1em;
   padding-bottom: 1em;
+  max-width: 408px;
 }
 
 .textblock-header {
@@ -345,4 +356,89 @@ tbody tr:nth-of-type(odd) td {
   float: left;
   color: $accent;
   margin-top: 0.5em;
+}
+@media only screen and (min-width:550px) {
+  .wrapper {
+    padding: 1em 2em;
+  }
+
+  .marketing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em;
+    //justify-content: space-around;
+  }
+
+  .textblock {
+    flex-basis: 50%;
+    padding: 1em;
+  }
+
+  .hero {
+    padding: 6em;
+  }
+
+  .header-button {
+    right: 0;
+    left: auto;
+    background: none;
+    width: 100px;
+  }
+
+  .footer .wrapper {
+    position: relative;
+  }
+
+  .footer-links {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    padding: 2em;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .menu-header {
+    display: block;
+    flex-basis: 100%;
+  }
+
+  .card {
+    margin-right: 1em;
+  }
+
+  * {
+    font-size: 14px;
+  }
+
+  .header-logo {
+    text-align: left;
+    padding-left: 2em;
+    display: block;
+  }
+}
+@media only screen and (min-width: 1116px) {
+  .textblock {
+    flex-basis: 33%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .menu-items {
+    flex-basis: 60%;
+  }
+
+  .table-form {
+    flex-basis: 40%;
+  }
 }
