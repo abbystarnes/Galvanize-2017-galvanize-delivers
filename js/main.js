@@ -82,7 +82,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       itemCards.append(itemCard);
    }
 
-   function createToast() {
+   function createToast(event) {
+      event.preventDefault();
       let toast = document.createElement('div');
       toast.style.backgroundColor = 'red';
       let nameInput = document.getElementById('nameInput');
@@ -121,8 +122,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
    }
 
    let formSubmitButton = document.getElementById('formSubmit');
-   formSubmitButton.addEventListener('click', createToast);
 
+   formSubmitButton.addEventListener('click', createToast);
 
    //click button
    // create new tr
