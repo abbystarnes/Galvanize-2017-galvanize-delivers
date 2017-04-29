@@ -42,9 +42,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
    let total = 0;
 
    let orderTableBody = orderTable.getElementsByTagName('tbody')[0];
-   console.log(orderTableBody);
+
+   let textFieldPopulated = false;
 
    function updateOrderTable() {
+      textFieldPopulated = true;
       var addedItemRow = document.createElement('tr');
       var addedItemName = document.createElement('td');
       addedItemName.innerHTML = this.dataset.name;
@@ -56,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       subtotal = subtotal + parseFloat(this.dataset.price);
       tax = parseFloat((.0825 * subtotal).toFixed(2));
       total = parseFloat((subtotal + tax).toFixed(2));
-      console.log(subtotal, tax, total);
       subtotalTD.innerHTML = `$${subtotal}`;
       taxTD.innerHTML = `$${tax}`;
       totalTD.innerHTML = `$${total}`;
@@ -80,6 +81,49 @@ document.addEventListener("DOMContentLoaded", function(event) {
       itemCard.append(itemCardButton);
       itemCards.append(itemCard);
    }
+
+   function createToast() {
+      let toast = document.createElement('div');
+      toast.style.backgroundColor = 'red';
+      let nameInput = document.getElementById('nameInput');
+      let numberInput = document.getElementById('numberInput');
+      let addressInput = document.getElementById('addressInput');
+
+      if (textFieldPopulated === false) {
+         let noItemsP = document.createElement('p');
+         noItemsP.innerHTML = "No menu items selected";
+         toast.append(noItemsP);
+      } else if (numberInput.value == "") {
+         let numberP = document.createElement('p');
+         numberP.innerHTML = "Number must be filled out";
+         toast.append(numberP);
+      } else if (addressInput.value == "") {
+         let addressP = document.createElement('p');
+         addressP.innerHTML = "Number must be filled out";
+         toast.append(addressP);
+      } else if (nameInput.value == "") {
+         let nameP = document.createElement('p');
+         nameP.innerHTML = "Name must be filled out";
+         toast.append(nameP);
+      } else {
+         let successP = document.createElement('p');
+         successP.innerHTML = "Your order was completed successfully!";
+         toast.append(successP);
+         toast.style.backgroundColor = 'green'
+      }
+
+      document.body.append(toast);
+
+      // if no menu items || any text field blank
+      // validation message
+      // else
+      // success message
+   }
+
+   let formSubmitButton = document.getElementById('formSubmit');
+   formSubmitButton.addEventListener('click', createToast);
+
+
    //click button
    // create new tr
    // create new td w/name
