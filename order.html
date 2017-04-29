@@ -5,70 +5,73 @@
   <meta charset="utf-8">
   <title>Galvanize Delivers</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <header class="header">
-    <a class="logo" href="index.html"><h1>Galvanize Delivers</h1></a>
-    <button id="headerButton" class="header-button">Order Delivery</button>
+    <a class="header-logo" href="index.html"><h1>Galvanize Delivers</h1></a>
+    <button id="headerButton" class="header-button"></button>
   </header>
-  <aside id="panel" class="panel">
+  <aside id="panel">
     <button class="panel-button">Order Delivery</button>
   </aside>
   <main>
-    <section id="menuItems">
-      <h2>Menu</h2>
+    <div id="screen">
+      <section id="menuItems">
+        <h2>Menu</h2>
 
-    </section>
-    <section id="orderTable">
-      <h2>Order</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="table--header">Item</th>
-            <th class="table--header">Price</th>
-          </tr>
-        </thead>
-        <tbody>
+      </section>
+      <section id="orderTable">
+        <h2>Order</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="table--header">Item</th>
+              <th class="table--header">Price</th>
+            </tr>
+          </thead>
+          <tbody>
 
-        </tbody>
-        <tfoot>
-          <tr id="subtotalRow">
-            <td>Subtotal</td>
-          </tr>
-          <tr id="taxRow">
-            <td>Tax</td>
-          </tr>
-          <tr id="totalRow">
-            <td>Total</td>
-          </tr>
-        </tfoot>
-      </table>
-      <form class="form">
-        <label class="input-label">Name
+          </tbody>
+          <tfoot>
+            <tr id="subtotalRow">
+              <td>Subtotal</td>
+            </tr>
+            <tr id="taxRow">
+              <td>Tax</td>
+            </tr>
+            <tr id="totalRow">
+              <td>Total</td>
+            </tr>
+          </tfoot>
+        </table>
+        <form class="form">
+          <label class="input-label">Name
           <input class="input" id="nameInput" type="text">
         </label>
-        <label class="input-label">Phone Number
+          <label class="input-label">Phone Number
           <input class="input" id="numberInput" type="text">
         </label>
-        <label class="input-label">Address
+          <label class="input-label">Address
           <input class="input" id="addressInput" type="text">
         </label class="input-label">
         <input class="input" id="formSubmit" type="submit">Place Order</input>
       </form>
     </section>
+  </div>
   </main>
-  <footer class="footer">
-    <h2 class="footer-header">Galvanize Delivers</h2>
-    <p>Fine Dining, Delivered.</p>
-    <ul>
+  <footer class="footer wrapper">
+    <a class="footer-logo"><h2>Galvanize Delivers</h2></a>
+    <p class="footer-tagline">Fine Dining, Delivered.</p>
+    <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="order.html">Order Delivery</a></li>
     </ul>
   </footer>
-  <footer class="footer footer--darkbase">
-    <p>&copy; 2016 Galvanize Delivers</p>
+  <footer class="footer footer--darkbase wrapper">
+    <p class="footer-copyright">&copy; 2016 Galvanize Delivers</p>
   </footer>
   <script type="text/javascript" src="js/main.js"></script>
 </body>

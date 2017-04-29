@@ -8,10 +8,17 @@
   box-sizing: border-box;
   font-family: "Roboto-Regular", helvetica, sans-serif;
   font-size: 12px;
-  line-height: 1.35; }
+  line-height: 1.5; }
 
-body {
+body,
+h2,
+h3,
+p,
+ul {
   margin: 0; }
+
+.wrapper {
+  padding: 1em; }
 
 .header {
   background-color: #0066cc; }
@@ -22,19 +29,23 @@ body {
   text-align: center; }
 
 .header-logo h1 {
+  font-size: 2em;
   margin: 0;
-  line-height: 1.5; }
+  line-height: 2; }
 
 .header-button {
   border: none;
   color: white;
   background-color: #0066cc;
   position: absolute;
-  height: 35px;
-  width: 35px;
+  height: 4em;
+  width: 4em;
+  padding: 1em;
   top: 0;
+  left: 0;
   background-image: url("../img/menu.svg");
-  background-size: cover;
+  background-size: 2em;
+  background-position: center;
   background-repeat: no-repeat; }
 
 aside {
@@ -45,11 +56,11 @@ aside {
   width: 200px;
   background-color: white;
   z-index: 2;
-  transition: all .5s ease; }
+  transition: all 0.5s ease; }
 
 .panel-active {
   left: 0;
-  transition: all .5s ease; }
+  transition: all 0.5s ease; }
 
 .screen-active {
   background-color: rgba(0, 0, 0, 0.3);
@@ -58,6 +69,80 @@ aside {
   left: 0;
   right: 0;
   bottom: 0; }
+
+.panel-button {
+  border: none;
+  height: 4em;
+  display: block;
+  background-color: #f2f2f2;
+  width: 100%;
+  padding-left: 2em;
+  text-align: left; }
+
+.hero {
+  background-image: url("../img/hero.jpg");
+  padding: 2em; }
+
+.hero-header {
+  color: white;
+  font-size: 3.998em;
+  font-family: "Roboto-Bold", helvetica, sans-serif;
+  text-align: center; }
+
+.hero-button {
+  background-color: #ff0080;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: none;
+  padding: 1em;
+  margin: 0 auto;
+  display: block;
+  margin-top: 1em; }
+
+.textblock {
+  padding: 1em; }
+
+.textblock-header {
+  color: #ff0080;
+  font-size: 1.414em;
+  margin-bottom: 0.5em; }
+
+.material-icons {
+  vertical-align: middle;
+  margin-right: 0.15em;
+  margin-top: -.15em; }
+
+.footer {
+  background-color: #0066cc; }
+
+.footer-logo {
+  text-decoration: none;
+  color: white; }
+
+.footer-logo h2 {
+  font-size: 1.414em;
+  margin-bottom: 0.5em; }
+
+.footer-tagline {
+  color: white;
+  margin-bottom: 0.5em; }
+
+.footer--darkbase {
+  background-color: #004d99; }
+
+.footer-links {
+  padding-left: 0; }
+
+.footer-links li {
+  list-style-type: none; }
+
+.footer-links a {
+  text-decoration: none;
+  color: white; }
+
+.footer-copyright {
+  color: white; }
 
 .toast {
   position: fixed;

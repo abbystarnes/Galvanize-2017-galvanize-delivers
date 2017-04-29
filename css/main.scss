@@ -1,54 +1,74 @@
 // fonts
-@font-face { font-family: 'Roboto-Regular'; src: url('../fonts/roboto/Roboto-Regular.ttf'); }
-@font-face { font-family: 'Roboto-Bold'; src: url('../fonts/roboto/Roboto-Bold.ttf'); }
-
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/roboto/Roboto-Bold.ttf');
+}
 // global colors
 $base: rgb(0,102,204); //blue
 $base--dark: rgb(0,77,153); //dark blue
 $accent: rgb(255,0,128); //pink
 $light: rgb(255,255,255); //white
 $dark: rgb(0,0,0); //dark
+$lightish: rgb(242,242,242); // global styles
 
-// global styles
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
   font-family: "Roboto-Regular", helvetica, sans-serif;
   font-size: 12px;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
-body {
+body,
+h2,
+h3,
+p,
+ul {
   margin: 0;
 }
+//wrapper
 
+.wrapper {
+  padding: 1em;
+}
 //header
+
 .header {
   background-color: $base;
 }
-.header-logo{
-  text-decoration:none;
+
+.header-logo {
+  text-decoration: none;
   color: $light;
   text-align: center;
 }
+
 .header-logo h1 {
+  font-size: 2em;
   margin: 0;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .header-button {
   border: none;
   color: $light;
   background-color: $base;
-  position:absolute;
-  height: 35px;
-  width: 35px;
+  position: absolute;
+  height: 4em;
+  width: 4em;
+  padding: 1em;
   top: 0;
+  left: 0;
   background-image: url('../img/menu.svg');
-  background-size: cover;
-  background-repeat:no-repeat;
+  background-size: 2em;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 // slideout order panel
+
 aside {
   position: absolute;
   top: 0;
@@ -56,26 +76,118 @@ aside {
   left: -200px;
   width: 200px;
   background-color: $light;
-  z-index:2;
-  transition: all .5s ease;
+  z-index: 2;
+  transition: all 0.5s ease;
 }
 
 .panel-active {
   left: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .screen-active {
   background-color: rgba(0,0,0,.3);
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
 
+.panel-button {
+  border: none;
+  height: 4em;
+  display: block;
+  background-color: $lightish;
+  width: 100%;
+  padding-left: 2em;
+  text-align: left;
+}
+// hero
 
+.hero {
+  background-image: url('../img/hero.jpg');
+  padding: 2em;
+}
+
+.hero-header {
+  color: $light;
+  font-size: 3.998em;
+  font-family: "Roboto-Bold", helvetica, sans-serif;
+  text-align: center;
+}
+
+.hero-button {
+  background-color: $accent;
+  color: $light;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: none;
+  padding: 1em;
+  margin: 0 auto;
+  display: block;
+  margin-top: 1em;
+}
+// marketing
+
+.textblock {
+  padding: 1em;
+}
+
+.textblock-header {
+  color: $accent;
+  font-size: 1.414em;
+  margin-bottom: 0.5em;
+}
+
+.material-icons {
+  vertical-align: middle;
+  margin-right: 0.15em;
+  margin-top: -.15em;
+}
+// footer
+
+.footer {
+  background-color: $base;
+}
+
+.footer-logo {
+  text-decoration: none;
+  color: $light;
+}
+
+.footer-logo h2 {
+  font-size: 1.414em;
+  margin-bottom: 0.5em;
+}
+
+.footer-tagline {
+  color: $light;
+  margin-bottom: 0.5em;
+}
+
+.footer--darkbase {
+  background-color: $base--dark;
+}
+
+.footer-links {
+  padding-left: 0;
+}
+
+.footer-links li {
+  list-style-type: none;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: $light;
+}
+
+.footer-copyright {
+  color: $light;
+}
 // toast
+
 .toast {
   position: fixed;
   top: 0;
