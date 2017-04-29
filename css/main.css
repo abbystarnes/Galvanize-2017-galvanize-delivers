@@ -47,7 +47,8 @@ ul {
   background-image: url("../img/menu.svg");
   background-size: 2em;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  border-radius: 2px; }
 
 aside {
   position: absolute;
@@ -99,10 +100,12 @@ aside {
   padding: 1em;
   margin: 0 auto;
   display: block;
-  margin-top: 1em; }
+  margin-top: 1em;
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .textblock {
-  padding: 1em; }
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
 .textblock-header {
   color: #ff0080;
@@ -194,5 +197,72 @@ aside {
 
 .card:nth-of-type(4) .card-image {
   background-image: url("../img/ice_cream.jpg"); }
+
+.table {
+  width: 100%;
+  border-collapse: collapse; }
+
+.table td,
+.table th {
+  padding: 1em; }
+
+.table-header {
+  font-family: "Roboto-Bold", helvetica, sans-serif; }
+
+.table-head th {
+  border-bottom: 1.5px solid #d9d9d9; }
+
+tbody tr:nth-of-type(odd) td {
+  background-color: #f2f2f2; }
+
+.table-header:last-of-type {
+  text-align: right; }
+
+.table-header:first-of-type {
+  text-align: left; }
+
+.table-total {
+  text-align: right; }
+
+.table-price {
+  text-align: right;
+  width: 25%; }
+
+.form {
+  width: calc(100% - ('.form-icon.width')); }
+
+.input-label {
+  font-size: 0.707em;
+  color: #a6a6a6; }
+
+.form .input {
+  display: block;
+  border: none;
+  border-bottom: 2px solid #00cc66;
+  margin-bottom: 1em;
+  padding-bottom: 0.75em;
+  width: 90%; }
+
+.form-submit {
+  border: none;
+  background-color: #ff0080;
+  color: white;
+  padding: 1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  display: block; }
+
+.form .form-textarea {
+  resize: none;
+  padding-bottom: 0;
+  margin-bottom: 2.5em; }
+
+.form-icon {
+  display: inline-block;
+  float: left;
+  color: #ff0080;
+  margin-top: 0.5em; }
 
 /*# sourceMappingURL=main.css.map */

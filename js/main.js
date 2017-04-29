@@ -52,8 +52,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
    var totalRow = document.getElementById('totalRow');
 
    var subtotalTD = document.createElement('td');
+   subtotalTD.className = 'table-price';
    var taxTD = document.createElement('td');
+   taxTD.className = 'table-price';
    var totalTD = document.createElement('td');
+   totalTD.className = 'table-price';
 
    subtotalRow.append(subtotalTD);
    taxRow.append(taxTD);
@@ -73,8 +76,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       var addedItemRow = document.createElement('tr');
       var addedItemName = document.createElement('td');
       addedItemName.innerHTML = this.dataset.name;
+      addedItemName.colSpan = '2';
       var addedItemPrice = document.createElement('td');
-      addedItemPrice.innerHTML = this.dataset.price;
+      addedItemPrice.innerHTML = `$${this.dataset.price}`;
+      addedItemPrice.className = 'table-price';
       addedItemRow.append(addedItemName, addedItemPrice);
       orderTableBody.append(addedItemRow);
 

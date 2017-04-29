@@ -26,9 +26,9 @@
       <section id="orderTable">
         <h2 class="order-header">Order</h2>
         <table class="table">
-          <thead>
+          <thead class="table-head">
             <tr>
-              <th class="table-header">Item</th>
+              <th colspan="2" class="table-header">Item</th>
               <th class="table-header">Price</th>
             </tr>
           </thead>
@@ -37,27 +37,30 @@
           </tbody>
           <tfoot>
             <tr id="subtotalRow">
-              <td>Subtotal</td>
+              <td class="table-total" colspan="2">Subtotal</td>
             </tr>
             <tr id="taxRow">
-              <td>Tax</td>
+              <td class="table-total" colspan="2">Tax</td>
             </tr>
             <tr id="totalRow">
-              <td>Total</td>
+              <td class="table-total" colspan="2">Total</td>
             </tr>
           </tfoot>
         </table>
         <form class="form">
+          <i class="material-icons form-icon">account_circle</i>
           <label class="input-label">Name
-          <input class="input" id="nameInput" type="text">
+          <input class="input" value="Bill Gates" id="nameInput" type="text">
         </label>
+          <i class="material-icons form-icon">phone</i>
           <label class="input-label">Phone Number
-          <input class="input" id="numberInput" type="text">
+          <input class="input" value="206-555-5555"  id="numberInput" type="text">
         </label>
+          <i class="material-icons form-icon">domain</i>
           <label class="input-label">Address
-          <input class="input" id="addressInput" type="text">
+          <textarea class="input form-textarea">One Microsoft Way Redmond, WA 98052-6399</textarea>
         </label class="input-label">
-        <input class="input" id="formSubmit" type="submit">Place Order</input>
+        <input class="form-submit" value="Place Order" id="formSubmit"type="submit"></input>
       </form>
     </section>
   </div>

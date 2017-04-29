@@ -13,7 +13,10 @@ $base--dark: rgb(0,77,153); //dark blue
 $accent: rgb(255,0,128); //pink
 $light: rgb(255,255,255); //white
 $dark: rgb(0,0,0); //dark
-$lightish: rgb(242,242,242); // global styles
+$lightish: rgb(242,242,242); // light grey
+$lightisher: rgb(217,217,217); // slightly darker light grey
+$lightisherist: rgb(166,166,166); // grey
+$alert-success: rgb(0, 204, 102);
 
 * {
   box-sizing: border-box;
@@ -67,6 +70,7 @@ ul {
   background-size: 2em;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 2px;
 }
 // slideout order panel
 
@@ -128,11 +132,13 @@ aside {
   margin: 0 auto;
   display: block;
   margin-top: 1em;
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.2);
 }
 // marketing
 
 .textblock {
-  padding: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .textblock-header {
@@ -255,4 +261,88 @@ aside {
   .card-image {
     background-image: url('../img/ice_cream.jpg');
   }
+}
+// table
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  padding: 1em;
+}
+
+.table-header {
+  font-family: "Roboto-Bold", helvetica, sans-serif;
+}
+
+.table-head th {
+  border-bottom: 1.5px solid $lightisher;
+}
+
+tbody tr:nth-of-type(odd) td {
+  background-color: $lightish;
+}
+
+.table-header:last-of-type {
+  text-align: right;
+}
+
+.table-header:first-of-type {
+  text-align: left;
+}
+
+.table-total {
+  text-align: right;
+}
+
+.table-price {
+  text-align: right;
+  width: 25%;
+}
+// form
+
+.form {
+  width: calc(100% - ('.form-icon.width'));
+}
+
+.input-label {
+  font-size: 0.707em;
+  color: $lightisherist;
+}
+
+.form .input {
+  display: block;
+  border: none;
+  border-bottom: 2px solid $alert-success;
+  margin-bottom: 1em;
+  padding-bottom: 0.75em;
+  width: 90%;
+}
+
+.form-submit {
+  border: none;
+  background-color: $accent;
+  color: $light;
+  padding: 1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.2);
+  margin: 0 auto;
+  display: block;
+}
+
+.form .form-textarea {
+  resize: none;
+  padding-bottom: 0;
+  margin-bottom: 2.5em;
+}
+
+.form-icon {
+  display: inline-block;
+  float: left;
+  color: $accent;
+  margin-top: 0.5em;
 }
