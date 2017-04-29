@@ -25,6 +25,7 @@ $lightish: rgb(242,242,242); // global styles
 body,
 h2,
 h3,
+h4,
 p,
 ul {
   margin: 0;
@@ -193,4 +194,65 @@ aside {
   top: 0;
   width: 100%;
   height: 30px;
+}
+// order page
+// menu
+
+.menu-header,
+.order-header {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.card {
+  width: 302px;
+  margin-bottom: 3em;
+  box-shadow: 0 4px 5px 1px rgba(0,0,0, .3);
+}
+
+.card-header {
+  font-size: 1.414em;
+  padding: 1.5em 1.5em 0.25em;
+}
+
+.card-button {
+  text-transform: uppercase;
+  color: $accent;
+  padding: 1.414em 2.121em;
+  width: 100%;
+  background-color: $light;
+  border: none;
+  border-top: 1px solid $lightish;
+  text-align: left;
+}
+
+.card-price {
+  padding: 0 2.121em 1.414em;
+}
+
+.card-image {
+  width: 302px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../img/burger.jpg');
+}
+
+.card:nth-of-type(2) {
+  .card-image {
+    background-image: url('../img/pizza.jpg');
+  }
+}
+
+.card:nth-of-type(3) {
+  .card-image {
+    background-image: url('../img/ribs.jpg');
+  }
+}
+
+.card:nth-of-type(4) {
+  .card-image {
+    background-image: url('../img/ice_cream.jpg');
+  }
 }

@@ -90,15 +90,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
    for (let x = 0; x < menuItems['items'].length; x++) {
       var itemCard = document.createElement('article');
+      itemCard.className = "card";
+      var itemCardImage = document.createElement('div');
+      itemCardImage.className = "card-image";
+      itemCard.append(itemCardImage);
       var itemCardName = document.createElement('h4');
+      itemCardName.className = "card-header"
       itemCardName.innerHTML = ` ${menuItems['items'][x].name}`;
       itemCard.append(itemCardName);
       var itemCardPrice = document.createElement('p');
       itemCardPrice.innerHTML = `$${menuItems['items'][x].price}`;
+      itemCardPrice.className = "card-price";
       itemCard.append(itemCardPrice);
       var itemCardButton = document.createElement('button');
       itemCardButton.addEventListener('click', updateOrderTable);
       itemCardButton.innerHTML = "Add To Order";
+      itemCardButton.className = "card-button"
       itemCardButton.dataset.price = (menuItems['items'][x].price);
       itemCardButton.dataset.name = (menuItems['items'][x].name);
       itemCard.append(itemCardButton);
