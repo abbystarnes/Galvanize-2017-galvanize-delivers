@@ -25,14 +25,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
    var headerButton = document.getElementById('headerButton');
    var aside = document.getElementById('aside');
    var myScreen = document.getElementById('screen');
+   var main = document.getElementById('main');
+   var footer1 = document.getElementById('footer1');
+   var footer2 = document.getElementById('footer2');
 
-   function toggleAside() {
+   function toggleAside(event) {
+      event.preventDefault();
       if (aside.className != "aside aside-active") {
          aside.className = "aside aside-active";
          headerButton.className = "header-button header-button-active";
+         main.className = ' tint';
+         footer1.className += ' tint';
+         footer2.className += ' tint';
+
       } else {
+
          aside.className = "aside";
          headerButton.className = "header-button";
+         main.className = '';
+         footer1.className = 'footer';
+         footer2.className = 'footer footer--darkbase';
       }
 
 
@@ -162,7 +174,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       toast.className = 'toast';
       setTimeout(function() {
          toast.className = "toast fade";
-      }, 800);
+      }, 400);
+      setTimeout(function() {
+         toast.className = "toast fade fade-out";
+      }, 5000);
 
 
    }
