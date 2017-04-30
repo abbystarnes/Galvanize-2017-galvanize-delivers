@@ -10,64 +10,61 @@
 </head>
 
 <body>
-  <aside id="panel">
-    <a href="order.html" class="panel-button">Order Delivery</a>
+  <aside id="aside" class="aside">
+    <a class="aside-button" href="order.html">Order Delivery</a>
   </aside>
-  <div id="screen" class="screen">
-    <header class="header">
-      <div class="wrapper">
-        <a class="header-logo" href="index.html"><h1>Galvanize Delivers</h1></a>
-        <button id="headerButton" class="header-button">Order Delivery</button>
-      </div>
-    </header>
+  <header class="header">
+    <div class="wrapper">
+      <a class="header-logo" href="index.html"><h1>Galvanize Delivers</h1></a>
+      <button id="headerButton" class="header-button">Order Delivery</button>
+    </div>
+  </header>
 
-    <main class="wrapper main">
-      <!-- <div id="screen"> -->
-      <section class="menu-items" id="menuItems">
-        <h2 class="menu-header">Menu</h2>
+  <main class="wrapper main">
+    <section class="menu-items" id="menuItems">
+      <h2 class="menu-header">Menu</h2>
 
-      </section>
-      <section class="table-form" id="orderTable">
-        <h2 class="order-header">Order</h2>
-        <table class="table">
-          <thead class="table-head">
-            <tr>
-              <th colspan="2" class="table-header">Item</th>
-              <th class="table-header">Price</th>
-            </tr>
-          </thead>
-          <tbody>
+    </section>
+    <section class="table-form" id="orderTable">
+      <h2 class="order-header">Order</h2>
+      <table class="table">
+        <thead class="table-head">
+          <tr>
+            <th colspan="2" class="table-header">Item</th>
+            <th class="table-header">Price</th>
+          </tr>
+        </thead>
+        <tbody>
 
-          </tbody>
-          <tfoot>
-            <tr id="subtotalRow">
-              <td class="table-total" colspan="2">Subtotal</td>
-            </tr>
-            <tr id="taxRow">
-              <td class="table-total" colspan="2">Tax</td>
-            </tr>
-            <tr id="totalRow">
-              <td class="table-total" colspan="2">Total</td>
-            </tr>
-          </tfoot>
-        </table>
-        <form class="form">
-          <i class="material-icons form-icon">account_circle</i>
-          <label class="input-label">Name
+        </tbody>
+        <tfoot>
+          <tr id="subtotalRow">
+            <td class="table-total" colspan="2">Subtotal</td>
+          </tr>
+          <tr id="taxRow">
+            <td class="table-total" colspan="2">Tax</td>
+          </tr>
+          <tr id="totalRow">
+            <td class="table-total" colspan="2">Total</td>
+          </tr>
+        </tfoot>
+      </table>
+      <form class="form">
+        <i class="material-icons form-icon">account_circle</i>
+        <label class="input-label">Name
           <input class="input" value="Bill Gates" id="nameInput" type="text">
         </label>
-          <i class="material-icons form-icon">phone</i>
-          <label class="input-label">Phone Number
+        <i class="material-icons form-icon">phone</i>
+        <label class="input-label">Phone Number
           <input class="input" value="206-555-5555"  id="numberInput" type="text">
         </label>
-          <i class="material-icons form-icon">domain</i>
-          <label class="input-label">Address
+        <i class="material-icons form-icon">domain</i>
+        <label class="input-label">Address
           <textarea id="addressInput" class="input form-textarea">One Microsoft Way Redmond, WA 98052-6399</textarea>
         </label class="input-label">
         <input class="form-submit" value="Place Order" id="formSubmit" type="submit"></input>
       </form>
     </section>
-  <!-- </div> -->
   </main>
   <footer class="footer">
     <div class="wrapper">
@@ -84,7 +81,6 @@
     <p class="footer-copyright">&copy; 2016 Galvanize Delivers</p>
     </div>
   </footer>
-  </div>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 

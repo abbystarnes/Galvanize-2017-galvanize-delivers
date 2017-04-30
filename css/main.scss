@@ -28,6 +28,7 @@ $alert-success: rgb(0, 204, 102);
 .wrapper {
   max-width: 1160px;
   margin: 0 auto;
+  padding: 1em;
 }
 
 body,
@@ -37,11 +38,6 @@ h4,
 p,
 ul {
   margin: 0;
-}
-//wrapper
-
-.wrapper {
-  padding: 1em;
 }
 //header
 
@@ -82,35 +78,32 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 2px;
-}
-// slideout order panel
-
-aside {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -200px;
-  width: 200px;
-  background-color: $light;
-  z-index: 2;
   transition: all 0.5s ease;
 }
 
-.panel-active {
-  left: 0;
-  transition: all 0.5s ease;
+.header-button-active {
+  right: 250px;
+  background-image: url('../img/close.svg');
 }
+// right 250 transition
+// icon transition to X
 
-.screen-active {
-  background-color: rgba(0,0,0,.3);
-  position: absolute;
-  top: 0;
-  left: 0;
+.aside {
+  width: 250px;
+  margin-right: -250px;
   right: 0;
-  bottom: 0;
+  position: fixed;
+  height: 100%;
+  background-color: white;
+  transition: all 0.5s ease;
+  z-index: 3;
 }
 
-.panel-button {
+.aside-active {
+  margin-right: 0;
+}
+
+.aside-button {
   text-decoration: none;
   border: none;
   height: 4em;
@@ -386,15 +379,6 @@ tbody tr:nth-of-type(odd) td {
     padding: 6em;
   }
 
-  .header-button {
-    color: $light;
-    right: 0;
-    left: auto;
-    background: none;
-    width: calc(100px + 2em);
-    padding: 1em;
-  }
-
   .footer .wrapper {
     position: relative;
   }
@@ -433,6 +417,15 @@ tbody tr:nth-of-type(odd) td {
   }
 }
 @media only screen and (min-width: 1116px) {
+  .header-button {
+    color: $light;
+    right: 0;
+    left: auto;
+    background: none;
+    width: calc(100px + 2em);
+    padding: 1em;
+  }
+
   .textblock {
     flex-basis: 33%;
   }

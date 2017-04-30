@@ -12,7 +12,8 @@
 
 .wrapper {
   max-width: 1160px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 1em; }
 
 body,
 h2,
@@ -21,9 +22,6 @@ h4,
 p,
 ul {
   margin: 0; }
-
-.wrapper {
-  padding: 1em; }
 
 .header {
   background-color: #0066cc; }
@@ -57,31 +55,27 @@ ul {
   background-size: 2em;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 2px; }
-
-aside {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -200px;
-  width: 200px;
-  background-color: white;
-  z-index: 2;
+  border-radius: 2px;
   transition: all 0.5s ease; }
 
-.panel-active {
-  left: 0;
-  transition: all 0.5s ease; }
+.header-button-active {
+  right: 250px;
+  background-image: url("../img/close.svg"); }
 
-.screen-active {
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 0;
-  left: 0;
+.aside {
+  width: 250px;
+  margin-right: -250px;
   right: 0;
-  bottom: 0; }
+  position: fixed;
+  height: 100%;
+  background-color: white;
+  transition: all 0.5s ease;
+  z-index: 3; }
 
-.panel-button {
+.aside-active {
+  margin-right: 0; }
+
+.aside-button {
   text-decoration: none;
   border: none;
   height: 4em;
@@ -298,14 +292,6 @@ tbody tr:nth-of-type(odd) td {
   .hero {
     padding: 6em; }
 
-  .header-button {
-    color: white;
-    right: 0;
-    left: auto;
-    background: none;
-    width: calc(100px + 2em);
-    padding: 1em; }
-
   .footer .wrapper {
     position: relative; }
 
@@ -336,6 +322,14 @@ tbody tr:nth-of-type(odd) td {
     padding-left: 2em;
     display: block; } }
 @media only screen and (min-width: 1116px) {
+  .header-button {
+    color: white;
+    right: 0;
+    left: auto;
+    background: none;
+    width: calc(100px + 2em);
+    padding: 1em; }
+
   .textblock {
     flex-basis: 33%; }
 

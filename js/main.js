@@ -23,29 +23,33 @@ var menuItems = {
 document.addEventListener("DOMContentLoaded", function(event) {
    //move toggle order panel
    var headerButton = document.getElementById('headerButton');
-   var panel = document.getElementById('panel');
+   var aside = document.getElementById('aside');
    var myScreen = document.getElementById('screen');
 
-   function togglePanel() {
-      if (panel.className != "") {
-         panel.className = "";
+   function toggleAside() {
+      if (aside.className != "aside aside-active") {
+         aside.className = "aside aside-active";
+         headerButton.className = "header-button header-button-active";
       } else {
-         panel.className = "panel-active";
+         aside.className = "aside";
+         headerButton.className = "header-button";
       }
+
+
    }
 
    // remove panel toggle med/large screens
    if (matchMedia) {
-      var mq = window.matchMedia("(min-width: 550px)");
+      var mq = window.matchMedia("(min-width: 1116px)");
       mq.addListener(WidthChange);
       WidthChange(mq);
    }
 
    function WidthChange(mq) {
       if (mq.matches) {
-         headerButton.removeEventListener('click', togglePanel);
+         headerButton.removeEventListener('click', toggleAside);
       } else {
-         headerButton.addEventListener('click', togglePanel);
+         headerButton.addEventListener('click', toggleAside);
       }
    }
 
