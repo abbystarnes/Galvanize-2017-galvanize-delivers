@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
    //move toggle order panel
    var headerButton = document.getElementById('headerButton');
    var panel = document.getElementById('panel');
-   var screen = document.getElementById('screen');
+   var myScreen = document.getElementById('screen');
 
    function togglePanel() {
       if (panel.className != "") {
@@ -32,17 +32,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
       } else {
          panel.className = "panel-active";
       }
-      if (screen.className != "") {
-         screen.className = "";
-         screen.removeEventListener('click', togglePanel);
-      } else {
-         screen.className = "screen-active"
-         screen.addEventListener('click', togglePanel);
-      }
    }
 
-   headerButton.addEventListener('click', togglePanel);
+   // remove panel toggle med/large screens
+   if (matchMedia) {
+      var mq = window.matchMedia("(min-width: 550px)");
+      mq.addListener(WidthChange);
+      WidthChange(mq);
+   }
 
+   function WidthChange(mq) {
+      if (mq.matches) {
+         headerButton.removeEventListener('click', togglePanel);
+      } else {
+         headerButton.addEventListener('click', togglePanel);
+      }
+   }
 
 
    // generate table items

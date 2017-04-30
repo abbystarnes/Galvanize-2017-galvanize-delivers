@@ -29,7 +29,8 @@ ul {
   background-color: #0066cc; }
 
 .header .wrapper {
-  padding: 0; }
+  padding: 0;
+  position: relative; }
 
 .header-logo {
   text-decoration: none;
@@ -44,14 +45,14 @@ ul {
 
 .header-button {
   border: none;
-  color: white;
+  color: rgba(255, 255, 255, 0);
   background-color: #0066cc;
   position: absolute;
   height: 4em;
   width: 4em;
   padding: 1em;
   top: 0;
-  left: 0;
+  right: 0;
   background-image: url("../img/menu.svg");
   background-size: 2em;
   background-position: center;
@@ -81,12 +82,16 @@ aside {
   bottom: 0; }
 
 .panel-button {
+  text-decoration: none;
   border: none;
   height: 4em;
   display: block;
+  color: black;
+  vertical-align: middle;
   background-color: #f2f2f2;
   width: 100%;
   padding-left: 2em;
+  line-height: 4em;
   text-align: left; }
 
 .hero {
@@ -103,7 +108,9 @@ aside {
   background-color: #ff0080;
   color: white;
   text-transform: uppercase;
+  text-decoration: none;
   border-radius: 0;
+  width: 10.07em;
   border: none;
   padding: 1em;
   margin: 0 auto;
@@ -292,10 +299,12 @@ tbody tr:nth-of-type(odd) td {
     padding: 6em; }
 
   .header-button {
+    color: white;
     right: 0;
     left: auto;
     background: none;
-    width: 100px; }
+    width: calc(100px + 2em);
+    padding: 1em; }
 
   .footer .wrapper {
     position: relative; }
@@ -339,6 +348,9 @@ tbody tr:nth-of-type(odd) td {
     flex-basis: 60%; }
 
   .table-form {
-    flex-basis: 40%; } }
+    flex-basis: 40%; }
+
+  .hero {
+    padding: 10em; } }
 
 /*# sourceMappingURL=main.css.map */

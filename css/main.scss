@@ -51,6 +51,7 @@ ul {
 
 .header .wrapper {
   padding: 0;
+  position: relative;
 }
 
 .header-logo {
@@ -68,14 +69,14 @@ ul {
 
 .header-button {
   border: none;
-  color: $light;
+  color: rgba(255,255,255,0);
   background-color: $base;
   position: absolute;
   height: 4em;
   width: 4em;
   padding: 1em;
   top: 0;
-  left: 0;
+  right: 0;
   background-image: url('../img/menu.svg');
   background-size: 2em;
   background-position: center;
@@ -110,12 +111,16 @@ aside {
 }
 
 .panel-button {
+  text-decoration: none;
   border: none;
   height: 4em;
   display: block;
+  color: $dark;
+  vertical-align: middle;
   background-color: $lightish;
   width: 100%;
   padding-left: 2em;
+  line-height: 4em;
   text-align: left;
 }
 // hero
@@ -136,7 +141,9 @@ aside {
   background-color: $accent;
   color: $light;
   text-transform: uppercase;
+  text-decoration: none;
   border-radius: 0;
+  width: 10.07em;
   border: none;
   padding: 1em;
   margin: 0 auto;
@@ -380,10 +387,12 @@ tbody tr:nth-of-type(odd) td {
   }
 
   .header-button {
+    color: $light;
     right: 0;
     left: auto;
     background: none;
-    width: 100px;
+    width: calc(100px + 2em);
+    padding: 1em;
   }
 
   .footer .wrapper {
@@ -440,5 +449,9 @@ tbody tr:nth-of-type(odd) td {
 
   .table-form {
     flex-basis: 40%;
+  }
+
+  .hero {
+    padding: 10em;
   }
 }
