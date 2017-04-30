@@ -162,7 +162,17 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 30px; }
+  height: 3em;
+  line-height: 3em;
+  transition: opacity 5s ease; }
+
+.fade {
+  opacity: 0; }
+
+.toast p {
+  line-height: 3em;
+  color: white;
+  text-align: center; }
 
 .menu-header,
 .order-header {

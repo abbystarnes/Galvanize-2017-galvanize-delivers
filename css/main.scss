@@ -17,6 +17,7 @@ $lightish: rgb(242,242,242); // light grey
 $lightisher: rgb(217,217,217); // slightly darker light grey
 $lightisherist: rgb(166,166,166); // grey
 $alert-success: rgb(0, 204, 102);
+$alert-error: rgb(255, 51, 51);
 
 * {
   box-sizing: border-box;
@@ -210,7 +211,19 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 30px;
+  height: 3em;
+  line-height: 3em;
+  transition: opacity 5s ease;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.toast p {
+  line-height: 3em;
+  color: $light;
+  text-align: center;
 }
 // order page
 // menu

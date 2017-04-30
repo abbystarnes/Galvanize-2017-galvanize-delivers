@@ -126,39 +126,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
       itemCards.append(itemCard);
    }
 
+
    function createToast(event) {
       event.preventDefault();
       let toast = document.createElement('div');
-      toast.style.backgroundColor = 'red';
+      toast.style.backgroundColor = 'rgb(255, 51, 51)';
       toast.className = 'toast';
       let nameInput = document.getElementById('nameInput');
       let numberInput = document.getElementById('numberInput');
       let addressInput = document.getElementById('addressInput');
-
       if (textFieldPopulated === false) {
          let noItemsP = document.createElement('p');
-         noItemsP.innerHTML = "No menu items selected";
+         noItemsP.innerHTML = "No menu items selected.";
          toast.append(noItemsP);
       } else if (numberInput.value == "") {
          let numberP = document.createElement('p');
-         numberP.innerHTML = "Number must be filled out";
+         numberP.innerHTML = "Number must be filled out.";
          toast.append(numberP);
       } else if (addressInput.value == "") {
          let addressP = document.createElement('p');
-         addressP.innerHTML = "Number must be filled out";
+         addressP.innerHTML = "Address must be filled out.";
          toast.append(addressP);
       } else if (nameInput.value == "") {
          let nameP = document.createElement('p');
-         nameP.innerHTML = "Name must be filled out";
+         nameP.innerHTML = "Name must be filled out.";
          toast.append(nameP);
       } else {
          let successP = document.createElement('p');
          successP.innerHTML = "Your order was completed successfully!";
          toast.append(successP);
-         toast.style.backgroundColor = 'green'
+         toast.style.backgroundColor = 'rgb(0, 204, 102)';
       }
 
       document.body.appendChild(toast);
+      toast.className = 'toast';
+      setTimeout(function() {
+         toast.className = "toast fade";
+      }, 800);
+
 
    }
 
