@@ -105,8 +105,6 @@ ul {
   right: 250px;
   background-image: url('../img/close.svg');
 }
-// right 250 transition
-// icon transition to X
 
 .aside {
   width: 250px;
@@ -394,6 +392,7 @@ tbody tr:nth-of-type(odd) td {
   color: $accent;
   margin-top: 0.5em;
 }
+// med and up
 @media only screen and (min-width:550px) {
   .wrapper {
     padding: 1em 2em;
@@ -453,6 +452,7 @@ tbody tr:nth-of-type(odd) td {
     display: block;
   }
 }
+// large and up
 @media only screen and (min-width: 1116px) {
   .header-button {
     color: $light;
