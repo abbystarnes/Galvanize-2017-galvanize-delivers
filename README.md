@@ -1,5 +1,5 @@
 # Galvanize Delivers
-[View Live](abbystarnes-galvanize-delivers.surge.sh)
+[View Live](http://abbystarnes-galvanize-delivers.surge.sh/)
 
 In this exercise, you're tasked with creating a website for a fine dining delivery service with two pages—a landing page and an ordering page. To get started, fork and clone this repository.
 
